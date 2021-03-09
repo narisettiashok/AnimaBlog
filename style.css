@@ -13,7 +13,7 @@ body::before {
     width: 100vw;
     align-items: center;
     justify-content: center;
-    background: url('Background/website.png');
+    background: url('Background/indexbackground.jpg');
     background-size: cover;
     filter: blur(5px);
     z-index: -1;
@@ -21,7 +21,7 @@ body::before {
 }
 
 .start-page {
-    background: url('background.jpg') no-repeat;
+    background: url('Background/indexbackground.jpg') no-repeat;
     background-size: cover;
     background-color: aqua;
     width: 22rem;
@@ -48,14 +48,13 @@ body::before {
     border-radius: 5px;
     border: solid #98acf8 1px;
     box-shadow:  3px 3px 4px 3px  #fceef5;
-    transition: .4s;
+    transition: 0.3s;
 }
 .btn1:hover, .btn2:hover, .btn3:hover {
     color: #153e90;
     background: linear-gradient(to right, #d5fdff,#aca8ff);
     cursor: pointer;
-    transition: 0.4s;
-    box-shadow: -3px -3px 4px 3px #bce6eb;
+    transition: 0.3s;
 }
 
 /* Home Bar */
