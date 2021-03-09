@@ -1,0 +1,61 @@
+body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+body::before {
+    content: "";
+    font-family: 'Times New Roman', Times, serif;
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    align-items: center;
+    justify-content: center;
+    background: url('Background/website.png');
+    background-size: cover;
+    filter: blur(5px);
+    z-index: -1;
+    position: fixed;
+}
+
+.start-page {
+    background: url('background.jpg') no-repeat;
+    background-size: cover;
+    background-color: aqua;
+    width: 22rem;
+    height: 30rem;
+    border-radius: 20px;
+    border: solid aqua 0px;
+    text-align: center;
+    overflow: hidden;
+    z-index: 10;
+}
+
+.btn1 {
+    margin: 7rem 0 0 0;
+}
+.btn2 {
+    margin: 3rem 0;
+}
+.btn1, .btn2, .btn3 {
+    background: transparent;
+    color: #ffffff;
+    font-size: larger;
+    width: 200px;
+    height: 40px;
+    border-radius: 5px;
+    border: solid #98acf8 1px;
+    box-shadow:  3px 3px 4px 3px  #fceef5;
+    transition: .4s;
+}
+.btn1:hover, .btn2:hover, .btn3:hover {
+    color: #153e90;
+    background: linear-gradient(to right, #d5fdff,#aca8ff);
+    cursor: pointer;
+    transition: 0.4s;
+    box-shadow: -3px -3px 4px 3px #bce6eb;
+}
+
+/* Home Bar */

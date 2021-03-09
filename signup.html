@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Animation Website </title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="stylesignup.css">
+        <link href="https://fonts.googleapis.com/css2?family=East+Sea+Dokdo&display=swap" rel="stylesheet">
+        <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.0/font/bootstrap-icons.css">
+    </head>
+    <body>
+        <div class="main">
+            <div class="signup-page">
+                <h1 id="create">Create Account</h1>
+                <form id="signup-form" action="">
+                <img src="flaticon/user.png" alt="User" class="flaticon-img">
+                <input class="signup-input" type="text" id="username" placeholder="Username"><br>
+                <img src="flaticon/email.png" alt="Email" class="flaticon-img">
+                <input class="signup-input" type="email" id="email" placeholder="Email"><br>
+                <img src="flaticon/password.png" alt="password" class="flaticon-img">
+                <input class="signup-input" type="password" id="password" placeholder="Password">
+                <p class="password-comment">*1 special char *1 num *min 8 char</p><br>
+                <img src="flaticon/mobile.png" alt="mobile" class="flaticon-img">
+                <input class="signup-input-mobile" type="text" id="mobilenumber" placeholder="Mobile Number"><br>
+                <button class="signup-btn" type="submit">Signup</button>
+                <p class="para">or Create Using </p>
+                <img class="flaticon-img-facebook" src="flaticon/facebook.png" alt="facebook">
+                <img class="flaticon-img-gmail" src="flaticon/gmail.png" alt="gmail"> 
+                <p class="para">or Already Signed Up </p>
+                <div class="welcome-btn-arrow">
+                    <button class="welcome-btn">Welcome</button>
+                    <svg onclick="login()" xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-caret-right right-arrow" viewBox="0 0 16 16">
+                    <path d="M6 12.796V3.204L11.481 8 6 12.796zm.659.753l5.48-4.796a1 1 0 0 0 0-1.506L6.66 2.451C6.011 1.885 5 2.345 5 3.204v9.592a1 1 0 0 0 1.659.753z"/>
+                    </svg>
+                </div>
+                   
+            </form>
+            </div>
+            <div class="login-page">
+                <h1 id="makeit"> Make it happen </h1>
+                <form id="login-form" action="">
+                    <img src="flaticon/user.png" alt="User" class="flaticon-img">
+                    <input class="login-input" type="text" id="username" placeholder="Username"><br>
+                    <img src="flaticon/email.png" alt="Email" class="flaticon-img">
+                    <input class="login-input" type="email" id="email" placeholder="Email"><br>
+                    <img src="flaticon/password.png" alt="password" class="flaticon-img">
+                    <input class="login-input" type="password" id="password" placeholder="Password">
+                    <p class="password-comment-error">*password is worng</p>
+                    <a href="" class="forgot-password">Forgot Password?</a><br>
+                    <input class="login-checkbox" type="checkbox" id="checkbox">
+                    <label class="remember-password">Remember Password</label><br>
+                    <button class="login-btn" type="submit">Login</button>
+                    <p class="para">or Login Using </p>
+                    <img class="flaticon-img-facebook" src="flaticon/facebook.png" alt="facebook">
+                    <img class="flaticon-img-gmail" src="flaticon/gmail.png" alt="gmail"> 
+                    <p class="para">or Need to Sign Up </p>
+                    <div class="welcome-btn-arrow">
+                        <svg onclick="signup()" xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-caret-left left-arrow" viewBox="0 0 16 16">
+                        <path d="M10 12.796V3.204L4.519 8 10 12.796zm-.659.753l-5.48-4.796a1 1 0 0 1 0-1.506l5.48-4.796A1 1 0 0 1 11 3.204v9.592a1 1 0 0 1-1.659.753z"/>
+                        </svg>
+                        <button class="getstarted-btn">Get Started</button>
+                    </div>
+            </div>
+        </div>
+        <script src="app.js"></script>
+    </body>
+</html>

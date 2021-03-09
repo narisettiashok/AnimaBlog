@@ -1,0 +1,246 @@
+
+body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+body::before {
+    content: "";
+    font-family: 'Times New Roman', Times, serif;
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    align-items: center;
+    justify-content: center;
+    background: url('/Background/website.png');
+    background-size: cover;
+    filter: blur(5px);
+    z-index: -1;
+    position: fixed;
+}
+h1 {
+    font-family: 'East Sea Dokdo', cursive;
+    font-size: 40px;
+    margin: 10px 0px;
+    color: #c24914;
+}
+.main {
+    background: url('Signin form.jfif') no-repeat;
+    background-size: cover;
+    background-color: aqua;
+    width: 40rem;
+    height: 30rem;
+    border-radius: 20px;
+    border: solid aqua 0px;
+    text-align: center;
+    overflow: hidden;
+    z-index: 10;
+    display: flex;
+    flex-direction: row;
+}
+.signup-page {
+    background-image: url('gif/mountain.gif');
+    text-align: center;
+    flex: 1;
+}
+#signup-form {
+    position: relative;
+    transition: 5.0s;
+}
+.flaticon-img {
+    position: relative;
+    left: 28px;
+    margin: -2px 0;
+    width: 14px;
+    height: 14px;
+}
+
+.signup-input, .signup-input-mobile {
+    width: 13rem;
+    margin: 8px 0;
+    height: 30px;
+    border: none;
+    border-radius: 20px;
+    box-shadow:  rgb(243, 236, 236) 1px 1px 1px,
+                 rgb(243, 236, 236)  -1px 1px 1px,
+                 rgb(243, 236, 236)  1px -1px 1px,
+                 rgb(243, 236, 236) -1px -1px 1px;
+}
+.signup-input-mobile {
+    margin-top: -2px;
+}
+input {
+    border:0;
+    outline:0;
+}
+::placeholder {
+    color: #fdbc61;
+    line-height: 2rem;
+}
+input[type="text"], input[type="email"], input[type="password"] {
+    padding-left: 30px;
+}
+
+.password-comment {
+    font-size:12px;
+    margin: 0px;
+    padding: 0px;
+}
+.signup-btn, .welcome-btn, .getstarted-btn {
+    border-radius: 30px;
+    font-size: 15px;
+    font-weight: bold;
+    margin-top: 0px;
+    padding: 5px 15px;
+    border: #f5aa42 solid 2px;
+    background-color: #ffffff;
+    color: #f5aa42;
+    box-shadow: none;
+    transition: .5s;
+}
+.signup-btn:hover, .welcome-btn:hover, .getstarted-btn:hover {
+    color: #ffffff;
+    background-color: #f5aa42;
+    cursor: pointer;
+    border: #ffffff solid 2px;
+    box-shadow:  rgb(245, 195, 130) 1px 1px 2px,
+                 rgb(245, 195, 130)  -1px 1px 2px,
+                 rgb(245, 195, 130)  1px -1px 2px,
+                 rgb(245, 195, 130) -1px -1px 2px;
+                 transition: 0.5s;
+}
+.flaticon-img-facebook, .flaticon-img-gmail {
+    width: 25px;
+    height: 25px;
+    margin: 0px 5px;
+}
+.para {
+    margin: 8px 0px;
+}
+.font-arrow {
+    position: relative;
+    top: 7px;
+    background-color: #ffffff;
+    font-size: 32px;
+    margin: 0px 0px 0px 10px;
+    border-radius: 50%;
+    color: #f5aa42;
+    transition: 0.5s;
+}
+.font-arrow:hover {
+    background-color: #f5aa42;
+    color: #ffffff;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.welcome-btn-arrow {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0% 20%;
+    padding: 10px 5px;
+}
+.right-arrow, .left-arrow {
+    color: #f5aa42;
+    font-weight: bold;
+    background-color: none;
+    border: solid 2px;
+    border-radius: 100%;
+    transition: 0.3s;
+} 
+.right-arrow:hover, .left-arrow:hover {
+    color: #ffffff;
+    font-weight: bold;
+    background-color: #f5aa42;
+    border: #ffffff solid 2px;
+    transition: 0.3s;
+    cursor: pointer;
+}
+/* Login Page */
+
+.login-page {
+    background-image: url('gif/sky.gif');
+    background-size: cover;
+    flex: 1;
+}
+#login-form {
+    position: relative;
+    left: 320px;
+    transition: 2.0s;
+}
+.login-input {
+    width: 13rem;
+    margin: 8px 0;
+    height: 30px;
+    border: none;
+    border-radius: 20px;
+    box-shadow:  rgb(243, 236, 236) 1px 1px 5px,
+                 rgb(243, 236, 236)  -1px 1px 5px,
+                 rgb(243, 236, 236)  1px -1px 5px,
+                 rgb(243, 236, 236) -1px -1px 5px;
+}
+.password-comment-error {
+    font-size:12px;
+    margin: 0px;
+    padding: 0px;
+}
+.login-btn {
+    border-radius: 30px;
+    font-size: 15px;
+    font-weight: bold;
+    margin-top: 8px;
+    padding: 5px 15px;
+    border: #f5aa42 solid 2px;
+    background-color: #ffffff;
+    color: #f5aa42;
+    box-shadow: none;
+    transition: .5s;
+}
+.login-btn:hover {
+    color: #ffffff;
+    background-color: #f5aa42;
+    cursor: pointer;
+    border: #ffffff solid 2px;
+    box-shadow:  rgb(245, 195, 130) 1px 1px 5px,
+                 rgb(245, 195, 130)  -1px 1px 5px,
+                 rgb(245, 195, 130)  1px -1px 5px,
+                 rgb(245, 195, 130) -1px -1px 5px;
+                 transition: 0.5s;
+}
+.password-comment-error {
+    margin-bottom: 10px;
+    padding: 0px;
+}
+.login-checkbox {
+    margin-top: 10px; 
+    margin-left: -50px;
+    padding: 0px;
+}
+.remember-password {
+    font-size: 15px;
+    margin-top: 10px;
+    padding: 0px;
+}
+.forgot-password { 
+    margin-top: 10px;
+    margin-left: 140px;
+    text-decoration: none;
+    color: #c24914;
+}
+.font-arrow-left {
+    position: relative;
+    top: 7px;
+    background-color: #ffffff;
+    font-size: 32px;
+    margin: 0px 10px 0px 0px;
+    border-radius: 50%;
+    color: #f5aa42;
+    transition: 0.5s;
+}
+.font-arrow-left:hover {
+    background-color: #f5aa42;
+    color: #ffffff;
+    cursor: pointer;
+    transition: 0.5s;
+}
