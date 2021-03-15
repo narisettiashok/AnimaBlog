@@ -169,7 +169,7 @@ body {
 
 /* Portfolio */
 .aboutme {
-    background-image: url('/Background/aboutme.png');
+    background-image: url('./Background/aboutme.png');
     background-position: right;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -210,7 +210,7 @@ body {
 
 }
 .whatido {
-    background-image: url('/Background/aboutme.png');
+    background-image: url('./Background/aboutme.png');
     background-position: left;
     background-attachment: fixed;
     background-size: cover;
@@ -318,7 +318,7 @@ body {
     right: 2%;
 }
 .whatilearn {
-    background-image: url('/Background/aboutme.png');
+    background-image: url('./Background/aboutme.png');
     background-position: left;
     background-attachment: fixed;
     background-size: cover;
@@ -393,7 +393,7 @@ body {
     border-bottom: 50vh solid transparent;
 }
 .contactme {
-    background-image: url('/Background/aboutme.png');
+    background-image: url('./Background/aboutme.png');
     background-position: left;
     background-attachment: fixed;
     background-size: cover;
