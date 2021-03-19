@@ -210,7 +210,7 @@ body {
 
 }
 .whatido {
-    background-image: url('./Background/aboutme.png');
+    background-image: url('Background/aboutme.png');
     background-position: left;
     background-attachment: fixed;
     background-size: cover;
