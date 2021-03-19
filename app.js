@@ -21,6 +21,7 @@ const readmore = document.querySelectorAll(".servicebtn");
 const container = document.querySelector('#container');
 const body = document.querySelector('body');
 const servicehidden = document.querySelectorAll('.service-hidden');
+const closeService = document.querySelectorAll('.close-service');
 function hello() {
     container.style.filter = "blur(5px)";
     container.style.pointerEvents = "none";
@@ -36,10 +37,31 @@ function popup() {
 }
 readmore.forEach(function(btn) {
     btn.addEventListener('click', popup);
-
 });
 
 
+function closepopup() {
+    container.style.filter = "none";
+    container.style.pointerEvents = "auto";
+    container.style.userEvents = "auto";
+    servicehidden[0].style.visibility = "none";
+    servicehidden[0].style.opacity = "0";
+    servicehidden[0].style.width = "0%";
+    servicehidden[0].style.height = "0%";
+}
+
+function close() {
+    console.log('Clicked for closing');
+    container.style.transition = "transform 1.0s ease-in-out";
+    closepopup();
+}
+
+closeService.forEach(function(btn) {
+    btn.addEventListener('click', close);
+});
+
+
+// Image Slide
 
 const slides = document.querySelectorAll('.slide');
 const slidescontainer = document.querySelector('.slider-container');
