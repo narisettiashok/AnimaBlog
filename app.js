@@ -51,7 +51,6 @@ function closepopup() {
 }
 
 function close() {
-    console.log('Clicked for closing');
     container.style.transition = "transform 1.0s ease-in-out";
     closepopup();
 }
@@ -73,7 +72,6 @@ let count = 1;
 slideimage();
 function slideimage() {
         let counttranslate = -((count-1)*46)+"%";
-        console.log(counttranslate);
         slidescontainer.style.transform = "translateX("+counttranslate+")";
 };
 function slide() {

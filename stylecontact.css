@@ -1,0 +1,52 @@
+.contact-container {
+    width: 100vw;
+    height: 94vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Yeon Sung', cursive;
+    scroll-behavior: smooth;
+}
+.contact-page {
+    width: 70%;
+    height: 80%;
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    border: solid 1px white;
+    border-radius: 15px;
+}
+.contact-descrition {
+    width: 100%;
+    height: 100%;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact-descrition-image {
+    width: 25vw;
+    height: 40vh;
+}
+.contact-content {
+    width: 100%;
+    height: 100%;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#contact-form {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: space-between;
+}
