@@ -39,7 +39,6 @@ readmore.forEach(function(btn) {
     btn.addEventListener('click', popup);
 });
 
-
 function closepopup() {
     container.style.filter = "none";
     container.style.pointerEvents = "auto";
@@ -58,6 +57,12 @@ function close() {
 closeService.forEach(function(btn) {
     btn.addEventListener('click', close);
 });
+
+// Services text limit
+
+const servicePara = document.querySelectorAll(".servicepara");
+
+
 
 
 // Image Slide

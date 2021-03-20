@@ -175,10 +175,10 @@ input[type="text"], input[type="email"], input[type="password"] {
     height: 30px;
     border: none;
     border-radius: 20px;
-    box-shadow:  rgb(243, 236, 236) 1px 1px 5px,
-                 rgb(243, 236, 236)  -1px 1px 5px,
-                 rgb(243, 236, 236)  1px -1px 5px,
-                 rgb(243, 236, 236) -1px -1px 5px;
+    box-shadow:  rgb(243, 236, 236) 1px 1px 1px,
+                 rgb(243, 236, 236)  -1px 1px 1px,
+                 rgb(243, 236, 236)  1px -1px 1px,
+                 rgb(243, 236, 236) -1px -1px 1px;
 }
 .password-comment-error {
     font-size:12px;

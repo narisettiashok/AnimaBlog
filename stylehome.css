@@ -134,20 +134,21 @@ body {
 }
 .home-items-btn {
     font-family: 'Langar', cursive;
-    background-color: ivory;
+    background-color: transparent;
     text-decoration: none;
     color: black;
     border: rgba(128, 128, 128, 0.404) solid 1px;
     border-radius: 15px;
-    padding: 5px 30px;
+    padding: 8px 30px;
     transition: 0.5s ease;
-    margin: 2px;
+    margin: 5px;
+    font-size: 15px;
 }
 .home-items-btn:hover {
     cursor: pointer;
-    color:rgb(236, 156, 196);
-    border: rgb(236, 156, 196) solid 3px;
-    border-radius:20px;
+    background-color: white;
+    color:rgb(148, 225, 255);
+    border-radius:15px;
     margin: 5px;
     font-size: 15px;
 }
@@ -158,7 +159,7 @@ body {
 }
 .home-itmes-arrow:hover {
     padding: 20px 0px;
-    color: rgb(236, 156, 196);
+    color: white;
 }
 .home-items-img {
     width: 15vw;
@@ -662,21 +663,22 @@ body {
     margin: 2% auto;
     border-top-right-radius: 30px;
     border-bottom-left-radius: 30px;
-    background-color: rgba(207, 71, 71, 0.575);
-    box-shadow: 2px 2px 8px rgba(240, 224, 224, 0.952),
-                -2px -2px 8px rgba(240, 223, 223, 0.945),
-                -2px 2px 8px rgba(245, 225, 225, 0.966),
-                2px -2px 8px rgba(233, 218, 218, 0.952);
+    background-color: transparent;
+    box-shadow: 2px 2px 2px rgba(240, 224, 224, 0.952),
+                -2px -2px 2px rgba(240, 223, 223, 0.945),
+                -2px 2px 2px rgba(245, 225, 225, 0.966),
+                2px -2px 2px rgba(233, 218, 218, 0.952);
+    transition: 0.3s ease-in-out;
 }
 .abouttitle:hover {
     cursor:pointer;
     background-color: #ffffff;
-    color: rgba(207, 71, 71, 0.575);
+    color: rgb(148, 225, 255);
     border: none;
-    box-shadow: 2px 2px 8px rgba(240, 184, 184, 0.733),
-                -2px -2px 8px rgba(240, 184, 184, 0.733),
-                -2px 2px 8px rgba(240, 184, 184, 0.733),
-                2px -2px 8px rgba(240, 184, 184, 0.733);
+    box-shadow: 2px 2px 2px rgb(148, 225, 255),
+                -2px -2px 2px rgb(148, 225, 255),
+                -2px 2px 2px rgb(148, 225, 255),
+                2px -2px 2px rgb(148, 225, 255);
 }
 .aboutimage {
     height: 100%;
