@@ -42,11 +42,49 @@
     align-items: center;
     justify-content: center;
 }
-
 #contact-form {
     width: 50%;
+    margin: 10px;
     display: flex;
     flex-direction: column;
     align-content: center;
     justify-content: space-between;
+}
+
+.contact-input, .contact-selection {
+    margin-bottom: 10px;
+    border: solid 0.5px rgb(206, 200, 200);
+    border-radius: 20px;
+    line-height: 1.5rem;
+}
+
+.contact-textarea {
+    margin-bottom: 10px;
+    border: solid 0.5px rgb(216, 212, 212);
+    border-radius: 20px;
+    line-height: 1rem;
+}
+
+input, textarea, select {
+    border: none;
+    outline: none;
+    padding: 5px;
+}
+ 
+input[type="text"], input[type="email"], input[type="tel"], textarea, select {
+    padding-left: 20px;
+}
+
+.contact-btn {
+    background-image: linear-gradient(to right,rgb(117, 207, 243),rgb(236, 217, 217));
+    font-family: 'Yeon Sung', cursive;
+    padding: 8px;
+    border-radius: 20px;
+    border: 0.5px white solid;
+    font-size: large;
+}
+
+.contact-btn:hover {
+    background-image: linear-gradient(to right,rgb(236, 217, 217), rgb(117, 207, 243));
+    cursor: pointer;
 }
