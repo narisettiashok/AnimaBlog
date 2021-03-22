@@ -26,7 +26,7 @@ const signupForm = document.getElementById('signup-form')
 
 function signupformsubmitted(event) {
    event.preventDefault();
-    alert(event.username);
+    alert('Hello World');
 
 }
 
