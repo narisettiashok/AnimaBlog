@@ -15,6 +15,24 @@ function login() {
     document.getElementById('makeit').innerHTML = "Connect To";
     document.getElementById('create').innerHTML = "Welcome to";
 }
+
+// SignUp Check
+
+const username = document.getElementById('signup-username');
+const email = document.getElementById('signup-email');
+const password = document.getElementById('signup-password');
+const mobilenumber = document.getElementById('signup-mobilenumber');
+const signupForm = document.getElementById('signup-form')
+
+function signupformsubmitted(event) {
+   event.preventDefault();
+    alert(event.username);
+
+}
+
+
+
+
 // Services Section //
 
 const readmore = document.querySelectorAll(".servicebtn");
