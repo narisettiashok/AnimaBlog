@@ -19,18 +19,84 @@ function login() {
 // SignUp Check
 
 const username = document.getElementById('signup-username');
+let usernameAlert = document.querySelector('.signup-username-alert');
 const email = document.getElementById('signup-email');
+const emailAlert = document.querySelector('.signup-email-alert');
 const password = document.getElementById('signup-password');
+const passwordAlert = document.querySelector('.password-comment');
 const mobilenumber = document.getElementById('signup-mobilenumber');
+const mobilenumberAlert = document.querySelector('.signup-mobile-alert');
 const signupForm = document.getElementById('signup-form')
 
-function signupformsubmitted(event) {
-   event.preventDefault();
-    alert('Hello World');
+function succesfullyRegistered(event) {
+    let formElements = [username, email, password, mobilenumber];
+    formElements.forEach(function(element) {
+        if(event === element.name) {
+            element.style.border = "green solid 1px";
+        } else {
+            element.style.border = "transparent solid 1px";
+        }
+    });
+};
 
+function checkedUsername() {
+    let checkAplhanumericValue = /^[0-9a-zA-Z]+$/;
+    let usernameEntered = username.value;
+    if(usernameEntered.match(checkAplhanumericValue)) {
+        if(usernameEntered.length >= 8) {
+            usernameAlert.innerText = 'Username Saved Succesfully';
+            succesfullyRegistered(username.name);
+        } else {
+            usernameAlert.innerText = 'Username should be more than 8 Characters';
+        }
+    } else {
+        return usernameAlert.innerText = 'Username should be alphanumeric';
+    };
+};
+
+function checkedEmail() {
+    let checkEmail = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+    let emailEntered = email.value;
+    if(emailEntered.match(checkEmail)) {
+        console.log("Email succesful");
+        emailAlert.innerText = 'Email Saved Succesfully';
+        succesfullyRegistered(email.name);
+    } else {
+        emailAlert.innerText = 'Email is Incorrect';
+    }
+};
+
+function checkedPassword() {
+    let checkPassword = /^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{8,15}$/;
+    let passwordEntered = password.value;
+    if(passwordEntered.match(checkPassword)) {
+        passwordAlert.innerText = 'Password Saved Succesfully';
+        succesfullyRegistered(password.name);
+    } else {
+        passwordAlert.innerText = '1 Spel Char, 1 Num, 8-15 Char';
+    }
+}
+
+function checkedMobilenumber() {
+    let checkMobilenumber = /^\d{10}$/;
+    let mobilenumberEntered = mobilenumber.value;
+    if(mobilenumberEntered.match(checkMobilenumber)) {
+        mobilenumberAlert.innerText = 'Mobile Number Saved Sucessfully';
+        succesfullyRegistered(mobilenumber.name);
+    } else {
+        mobilenumberAlert.innerText = "Enter Mobile number Correctly";
+    }
 }
 
 
+signupForm.onsubmit = function(event) {
+    event.preventDefault();
+    checkedUsername();
+    checkedEmail();
+    checkedPassword();
+    checkedMobilenumber();
+    console.log("Form Submitted");  
+};
 
 
 // Services Section //
