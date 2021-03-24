@@ -246,8 +246,3 @@ function radiocheck() {
 radiobtn.forEach(function(radio) {
     radio.addEventListener("click", radiocheck);
 })
-
-
-
-
-
