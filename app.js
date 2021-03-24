@@ -28,16 +28,14 @@ const mobilenumber = document.getElementById('signup-mobilenumber');
 const mobilenumberAlert = document.querySelector('.signup-mobile-alert');
 const signupForm = document.getElementById('signup-form')
 
-function succesfullyRegistered(event, message) {
+function succesfullyRegistered() {
     let formElements = [username, email, password, mobilenumber];
     let errorMessage = [usernameAlert, emailAlert, passwordAlert, mobilenumberAlert];
 
     formElements.forEach(function(element) {
-        if(event === element.name) {
             element.style.border = "green solid 1px";
-        }
     });
-};
+}
 
 function notSuccesfullyRegistered(event) {
     let formElements = [username, email, password, mobilenumber];
@@ -55,26 +53,26 @@ function checkedUsername() {
     if(usernameEntered.match(checkAplhanumericValue)) {
         if(usernameEntered.length >= 8) {
             // usernameAlert.innerText = 'Username Saved Succesfully';
-            succesfullyRegistered(username.name, 'Username Submitted Succesfully');
+            // succesfullyRegistered(username.name, 'Username Submitted Succesfully');
             return true;
         }
         } else {
             // usernameAlert.innerText = 'Username should be more than 8 Characters';
-            notSuccesfullyRegistered(username.name, 'Should be Alphanumeric & Min 8 Char');
+            // notSuccesfullyRegistered(username.name, 'Should be Alphanumeric & Min 8 Char');
             return false;
-};
+}
+}
 
 function checkedEmail() {
     let checkEmail = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
     let emailEntered = email.value;
     if(emailEntered.match(checkEmail)) {
-        console.log("Email succesful");
-        emailAlert.innerText = 'Email Saved Succesfully';
-        succesfullyRegistered(email.name);
+        // emailAlert.innerText = 'Email Saved Succesfully';
+        // succesfullyRegistered(email.name);
         return true;
     } else {
-        emailAlert.innerText = 'Email is Incorrect';
-        notSuccesfullyRegistered(email.name);
+        // emailAlert.innerText = 'Email is Incorrect';
+        // notSuccesfullyRegistered(email.name);
         return false;
     }
 };
@@ -83,12 +81,12 @@ function checkedPassword() {
     let checkPassword = /^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{8,15}$/;
     let passwordEntered = password.value;
     if(passwordEntered.match(checkPassword)) {
-        passwordAlert.innerText = 'Password Saved Succesfully';
-        succesfullyRegistered(password.name);
+        // passwordAlert.innerText = 'Password Saved Succesfully';
+        // succesfullyRegistered(password.name);
         return true;
     } else {
-        passwordAlert.innerText = '1 Spel Char, 1 Num, 8-15 Char';
-        notSuccesfullyRegistered(password.name);
+        // passwordAlert.innerText = '1 Spel Char, 1 Num, 8-15 Char';
+        // notSuccesfullyRegistered(password.name);
         return false;
     }
 }
@@ -97,12 +95,12 @@ function checkedMobilenumber() {
     let checkMobilenumber = /^\d{10}$/;
     let mobilenumberEntered = mobilenumber.value;
     if(mobilenumberEntered.match(checkMobilenumber)) {
-        mobilenumberAlert.innerText = 'Mobile Number Saved Sucessfully';
-        succesfullyRegistered(mobilenumber.name);
+        // mobilenumberAlert.innerText = 'Mobile Number Saved Sucessfully';
+        // succesfullyRegistered(mobilenumber.name);
         return true;
     } else {
-        mobilenumberAlert.innerText = "Enter Mobile number Correctly";
-        notSuccesfullyRegistered(mobilenumber.name);
+        // mobilenumberAlert.innerText = "Enter Mobile number Correctly";
+        // notSuccesfullyRegistered(mobilenumber.name);
         return false;
     }
 }
@@ -110,23 +108,24 @@ function checkedMobilenumber() {
 
 signupForm.onsubmit = function(event) {
     event.preventDefault();
-    let checkCondition = {
-        username: /^[0-9a-zA-Z]+$/,
-        email: /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/,
-        password: /^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{8,15}$/,
-        mobilenumber: /^\d{10}$/
-    }
+    // let checkCondition = {
+    //     username: /^[0-9a-zA-Z]+$/,
+    //     email: /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/,
+    //     password: /^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{8,15}$/,
+    //     mobilenumber: /^\d{10}$/
+    // }
 
-    var x = checkCondition.username;
+    // var x = checkCondition.username;
     if(username.value == "" || email.value == "" || password.value == "" || mobilenumber.value == "") {
         console.log("Fill all the Fields");
     } else {
-        checkedUsername();
-        checkedEmail();
-        checkedPassword();
-        checkedMobilenumber();
-        console.log("Eorror"); 
+        if(checkedUsername() == true && checkedEmail() == true && checkedPassword() == true && checkedMobilenumber() == true){
+            succesfullyRegistered();
+            console.log("Form Submitted Succesfully");
+    } else {
+            console.log("Error in submission");
     }
+}
 };
 
 
@@ -242,7 +241,8 @@ function radiocheck() {
     };
     slide();
     slideimage();
-}
+};
+
 radiobtn.forEach(function(radio) {
     radio.addEventListener("click", radiocheck);
 })
