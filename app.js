@@ -45,6 +45,10 @@ function succesfullyRegistered() {
         let textMessage = formElements[i].name + " " + "submitted succesfully";
         errorMessage[i].innerText =  textMessage.slice(0,1).toUpperCase() + textMessage.slice(1,);
     }
+
+    formElements.forEach(function(reset) {
+        reset.value = "";
+    })
 };
 
 function notSuccesfullyRegistered(message) {
