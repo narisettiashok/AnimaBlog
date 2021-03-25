@@ -30,7 +30,7 @@ h1 {
     background-size: cover;
     background-color: transparent;
     width: 40rem;
-    height: 32rem;
+    height: 33rem;
     border-radius: 20px;
     border: solid aqua 0px;
     text-align: center;
@@ -86,12 +86,19 @@ input[type="text"], input[type="email"], input[type="password"] {
     padding-left: 30px;
 }
 
-.password-comment, .signup-username-alert, .signup-email-alert, .signup-mobile-alert {
+.password-comment, .signup-username-alert, .signup-email-alert{
     text-align: center;
     font-size:12px;
     margin: 0px;
     padding: 0px;
 }
+.signup-mobile-alert {
+    text-align: center;
+    font-size:12px;
+    margin: 0px;
+    padding: 0px 0px 10px 0px;
+}
+
 .signup-btn, .welcome-btn, .getstarted-btn {
     border-radius: 30px;
     font-size: 15px;
