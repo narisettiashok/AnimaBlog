@@ -238,7 +238,7 @@ body {
     background-color: rgba(233, 136, 152, 0.842);
     margin: 0px;
     padding: 0px;
-    width: 100%;
+    width: 75vw;
     height: 75vh;
     display: flex;
     flex-direction: row;
@@ -254,14 +254,14 @@ body {
     background-size: cover;
     margin: 0px;
     padding: 0px;
-    width:100%;
+    width:37.5vw;
     height:75vh;
     background-color: green;
 }
 .whatido-content {
     margin: auto;
     flex: 1;
-    width: 100%;
+    width: 37.5vw;
     height: 75vh;
     background-color: white;
     display: flex;
@@ -269,15 +269,13 @@ body {
     justify-content: center;
 }
 .whatido-para {
-    width: 75%;
-    height: 75%;
-    margin: 2% auto;
+    width: 100%;
+    height: 100%;
 }
-.radio-btn {
-    margin: 0px;
-}
-.radiobtn:hover {
-    cursor: pointer;
+.slides {
+    width:100%;
+    height: 100%;
+    margin: 5px;
 }
 .slider-containermain {
     display: flex;
@@ -297,7 +295,7 @@ body {
     margin-right: 20%;
     margin-left: 1%;
 }
-.slider-container h1 {
+.slider-container-description h1 {
     font-family: 'Lobster', cursive;
     background-color: rgb(240, 184, 193);
     margin: 10% auto;
@@ -334,6 +332,12 @@ body {
     color:rgb(240, 184, 193);
     border-radius: 2px;
     cursor:pointer;
+}
+.radio-btn {
+    margin: 0px;
+}
+.radiobtn:hover {
+    cursor: pointer;
 }
 #arrowleft {
     position: absolute;
