@@ -171,13 +171,17 @@ const servicePara = document.querySelectorAll(".servicepara");
 
 
 
-// Image Slide
+// Image Appear
 
 const slides = document.querySelectorAll('.slide');
 const slidescontainer = document.querySelector('.slider-container');
+const sliderContainerDescription = document.querySelector(".slider-container-description");
 const slideimg = document.querySelectorAll('.slideimg');
 const arrows = document.querySelectorAll('.btn');
 const radiobtn = document.querySelectorAll('.radiobtn');
+
+console.log(slidescontainer);
+console.log(sliderContainerDescription);
 
 let count = 1;
 slideimage();
