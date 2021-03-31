@@ -70,7 +70,7 @@ body {
 }
 .home-content-head {
     width: 100%;
-    height:25vh;
+    height:20vh;
     display: flex;
     flex-direction: column;
     align-content: center;
@@ -109,7 +109,7 @@ body {
 }
 .home-itmes {
     width: 100%;
-    height: 65vh;
+    height: 60vh;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -143,6 +143,11 @@ body {
     transition: 0.5s ease;
     margin: 5px;
     font-size: 15px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, 
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, 
+    rgba(0, 0, 0, 0.12) 0px 4px 6px, 
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, 
+    rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 .home-items-btn:hover {
     cursor: pointer;
@@ -154,7 +159,7 @@ body {
 }
 .home-itmes-arrow {
     padding: 15px 0px;
-    margin: 5px 0px;
+    margin: 10px 0px;
     transition: 0.5s ease;
 }
 .home-itmes-arrow:hover {
@@ -388,11 +393,11 @@ body {
     background-color: transparent;
     position: relative;
     text-align: left;
-    padding: 10%;
+    padding: 5%;
 }
 .progressbar-container h2 {
     font-family: 'Lobster', cursive;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
     margin-left: 10px;
 }
 .progressbar {
@@ -528,7 +533,7 @@ body {
     position: relative;
     left: 50%;
     top: 50%;
-    transform: translate(30%,-220%);
+    transform: translate(30%,-170%);
     display: flex;
     flex-direction: column;
     text-align: center;
@@ -547,7 +552,7 @@ body {
     display: flex;
     flex-direction: row;
     align-items: center;
-    width: 50%;
+    width: 70%;
     height: 30vh;
     transition: 0.5s ease;
     margin: 1%;
@@ -588,17 +593,19 @@ body {
     height: 100%;
     display: grid;
     grid-template-columns: auto auto auto auto;
-    grid-gap: 50px 50px;
-    padding: 4%;
+    grid-gap: 50px 100px;
+    padding: 5%;
 }
 .servicemain {
-    background-color: transparent;
-    height: 45vh;
+    background-color: white;
+    height: 40vh;
     padding: 8% 5% 0% 5%; 
     display: flex;
     align-items: flex-start;
     justify-content: center;
     transition: 0.5s ease;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 30px 90px;
+    border-radius: 50px/20px;
 }
 .servicemain:hover {
     cursor: pointer;
@@ -618,14 +625,14 @@ body {
 }
 .servicehead {
     font-family: 'Lobster', cursive;
-    font-size: 15px;
+    font-size: 13px;
     margin-bottom: 10px;
 }
 .servicepara {
-    width: 12vw;
+    width: 14vw;
     font-family: 'Indie Flower', cursive;
     font-size: 10px;
-    text-align: center;
+    text-align: left;
     margin: 0 auto;
     padding-bottom: 10px;
 }
@@ -633,26 +640,27 @@ body {
     border: none;
     outline: none;
     padding: 8px;
-    border-radius: 20px/10px;
+    border-radius: 20px;
     border: none;
     font-weight: bold;
-    background-color: rgba(69, 109, 241, 0.699);
+    background-color: rgba(126, 153, 240, 0.699);
     transition: 0.5s;
+
 }
 .servicebtn:hover {
     background-color: white;
-    border-radius: 20px/10px;
-    box-shadow: 2px 2px 8px rgba(157, 177, 243, 0.699),
-                -2px -2px 8px rgba(156, 176, 240, 0.699),
-                -2px 2px 8px rgba(119, 146, 235, 0.699),
-                2px -2px 8px rgba(180, 195, 245, 0.699);
-    color:rgb(236, 85, 110);
+    border-radius: 20px;
+    box-shadow: 2px 2px 8px rgba(157, 177, 243, 0.336),
+                -2px -2px 8px rgba(156, 176, 240, 0.336),
+                -2px 2px 8px rgba(119, 146, 235, 0.308),
+                2px -2px 8px rgba(180, 195, 245, 0.226);
+    color:rgba(69, 108, 238, 0.89);
     cursor: pointer;
 }
 
 .service-hidden {
     position:fixed;
-    background-color: blanchedalmond;
+    background-image: linear-gradient(to right,rgb(117, 207, 243),rgb(236, 217, 217));
     width: 0%;
     height: 50%;
     top:50%;
@@ -662,8 +670,52 @@ body {
     opacity:0;
     z-index: 10;
     transition: 1.0s ease;
+    border-radius: 10px;
 }
-
+.service-hidden-close {
+    margin-top: 10px;
+    margin-right: 10px;
+    text-align: right;
+}
+.close-service {
+    background-color: white;
+    width: 5rem;
+    text-align: center;
+    line-height: 2rem;
+    border-radius: 5px;
+    border: none;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, 
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, 
+    rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    outline: none;
+}
+.close-service:hover {
+    cursor: pointer;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, 
+    rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+    outline: none;
+}
+.service-hidden-content {
+    width: 90%;
+    height: 80%;
+    margin: 15px auto;
+    text-align: center;
+    background-color: violet;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+}
+.service-hidden-image {
+    flex:1;
+    width: 100%;
+    height: 100%;
+    background-color: tomato;
+}
+.service-hidden-description {
+    flex:1;
+    background-color: thistle;
+}
 /* About Page */
 
 .about-page {
