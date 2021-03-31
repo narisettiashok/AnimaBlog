@@ -179,27 +179,30 @@ body {
 }
 .aboutme-main-container {
     position: fixed;
-    width: 75vw;
-    height: 75vh;
-    background-color: brown;
-    border: red solid 1px;
+    width: 90vw;
+    height: 80vh;
+    background-color: transparent;
     display: flex;
     flex-direction: column;
     overflow-y: scroll;
     -ms-overflow-style: none;
     scrollbar-width: none;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 30px 90px;
+    border-radius: 1rem;
 }
 ::-webkit-scrollbar {
     display: none;
 }
-
+.aboutme-main-container:hover {
+    
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+}
 .aboutme {
-    background-image: transparent;
-    background-color: rgba(233, 136, 152, 0.842);
+    background-color: transparent;
     margin: 0px;
     padding: 0px;
     width:100%;
-    height: 75vh;
+    height: 80vh;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -209,7 +212,7 @@ body {
     margin: auto;
     flex: 1;
     height: 100%;
-    background-color: white;
+    background-color: transparent;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -234,12 +237,11 @@ body {
 }
 
 .whatido {
-    background-image: transparent;
-    background-color: rgba(233, 136, 152, 0.842);
+    background-color: transparent;
     margin: 0px;
     padding: 0px;
-    width: 75vw;
-    height: 75vh;
+    width: 90vw;
+    height: 80vh;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -254,15 +256,15 @@ body {
     background-size: cover;
     margin: 0px;
     padding: 0px;
-    width:37.5vw;
-    height:75vh;
+    width:45vw;
+    height:80vh;
     background-color: green;
 }
 .whatido-content {
     flex: 1;
-    width: 37.5vw;
-    height: 75vh;
-    background-color: white;
+    width: 45vw;
+    height: 80vh;
+    background-color: transparent;
     margin: 0px;
     display: flex;
     align-items: center;
@@ -288,7 +290,7 @@ body {
     cursor: pointer;
 }
 .slider-containermain {
-    height: 60vh;
+    height: 70vh;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -301,8 +303,8 @@ body {
     position: relative;
 }
 .slideimg {
-    width:37.5vw;
-    height: 45vh;
+    width:45vw;
+    height: 60vh;
     margin-bottom: 2rem;
     text-align: center;
     transition: .5s;
@@ -310,23 +312,19 @@ body {
 }
 .slideimg:hover {
     cursor: pointer;
-    /* box-shadow: 1px 1px 10px 1px rgba(233, 229, 229, 0.733),
-                -1px -1px 10px 1px rgba(233,229,229,0.733),
-                -1px 1px 10px 1px rgba(233,229,229,0.733),
-                1px -1px 10px 1px rgba(233,229,229,0.733); */
 }
-.img1 {
+#img1 {
     z-index: 1;
 }
 
-.img2 {
-    z-index: 2;
+#img2 {
+    z-index: 1;
 }
-.img3 {
-    z-index:3;
+#img3 {
+    z-index:1;
 }
-.img4 {
-    z-index:4;
+#img4 {
+    z-index:1;
 }
 
 .slider-container-description h1 {
@@ -339,17 +337,8 @@ body {
     left: 40%;
 }
 
-.heading1 {
+#work1, #work2, #work3, #work4 {
     z-index: 1;
-}
-.heading2 {
-    z-index: 2;
-}
-.heading3 {
-    z-index: 3;
-}
-.heading4 {
-    z-index: 4;
 }
 
 .slider-arrows {
@@ -380,11 +369,8 @@ body {
 }
 
 .whatilearn {
-    background-image: url('./Background/aboutme.png');
-    background-position: left;
-    background-attachment: fixed;
-    background-size: cover;
-    height: 100vh;
+    width: 100%;
+    height: 80vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -393,14 +379,16 @@ body {
     margin: 0px;
     padding: 0px;
     flex: 1;
-    height: 100vh;
-    background-color: white;
+    width: 45vw;
+    height: 80vh;
+    background-color: transparent;
     text-align: center;
 }
 .progressbar-container {
+    background-color: transparent;
     position: relative;
     text-align: left;
-    padding: 5%;
+    padding: 10%;
 }
 .progressbar-container h2 {
     font-family: 'Lobster', cursive;
@@ -411,7 +399,7 @@ body {
     height: 25px;
     width: 100%;
     border-radius: 20px;
-    margin-bottom: 10%;
+    margin-bottom: 8%;
     background-color: rgba(128, 128, 128, 0.589);
     box-shadow: 2px 2px 10px rgba(233, 229, 229, 0.733),
                 -2px -2px 10px rgba(233,229,229,0.733),
@@ -422,20 +410,8 @@ body {
     height: 25px;
     width: 80%;
     border-radius: 20px;
-    background: linear-gradient(45deg, rgb(236, 203, 208), rgb(247, 94, 120));
+    background-image: linear-gradient(45deg, rgb(236, 203, 208), rgb(247, 94, 120));
     font-family: 'Lobster', cursive;
-    animation: gradient 1s infinite;
-}
-@keyframes gradient {
-    0% {
-		background-position: 0% 50%;
-	}
-	50% {
-		background-position: 100% 50%;
-	}
-	100% {
-		background-position: 0% 50%;
-	}
 }
 .progress p {
     font-family: 'Lobster', cursive;
@@ -445,55 +421,56 @@ body {
     color: black;
 }
 .whatilearn-scroll {
+    background-image: url('./Background/aboutmeC.png');
+    background-position: right;
+    background-attachment: fixed;
+    background-size: cover;
     margin: 0px;
     padding: 0px;
     flex:1;
-    width:0;
-    height:0;
-    border-top: 50vh solid transparent;
-    border-left: 300px solid white;
-    border-bottom: 50vh solid transparent;
+    width:45vw;
+    height:80vh;
 }
 .contactme {
-    background-image: url('./Background/aboutme.png');
-    background-position: left;
-    background-attachment: fixed;
-    background-size: cover;
-    height: 100vh;
+    width: 90vw;
+    height: 80vh;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 .contactme-scroll {
+    background-image: url('./Background/aboutmeC.png');
+    background-position: left;
+    background-attachment: fixed;
+    background-size: cover;
     margin:0;
     padding:0;
     flex:1;
-    width:0;
-    height:0;
-    border-top: 50vh solid transparent;
-    border-right: 300px solid white;
-    border-bottom: 50vh solid transparent;
+    width:45vw;
+    height:80vh;
 }
 .contactme-content {
     flex:1;
-    background-color: white;
+    background-color: transparent;
     margin: 0px;
     padding: 0px;
-    height: 100vh;
+    width: 45vw;
+    height: 80vh;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
 .contactmeinform {
     margin: 0% 0%;
-    width: 50%;
-    height: 50vh;
+    width: 60%;
+    height: 30vh;
     padding: 5% 5% 10% 10%;
     font-family: 'Lobster', cursive;
     font-size: 15px;
     transition: 0.5s ease;
 }
 .contactmeinform:hover, .contactmeresume:hover {
+    background-color: white;
     box-shadow: 2px 2px 10px rgba(240, 184, 184, 0.733),
                 -2px -2px 10px rgba(240, 184, 184, 0.733),
                 -2px 2px 10px rgba(240, 184, 184, 0.733),
@@ -570,8 +547,8 @@ body {
     display: flex;
     flex-direction: row;
     align-items: center;
-    width: 75%;
-    height: 25vh;
+    width: 50%;
+    height: 30vh;
     transition: 0.5s ease;
     margin: 1%;
     padding: 0.5% 2% 0.5% 3%;
@@ -582,20 +559,17 @@ body {
     transition: 0.5s ease;
     margin-right: 20px;
 }
-.contactmeresume img:hover {
-    box-shadow: 2px 2px 10px 5px rgb(233, 199, 199),
-                -2px -2px 5px  rgb(247, 228, 228),
-                -2px 2px 5px  rgb(223, 173, 173),
-                2px -2px 5px  rgb(230, 214, 214);
-}
 .contactmeresume button {
     height: 35px;
 }
-.copyright {
-    height: 5vh;
-    text-align: center;
-}
 
+/* Copy Right */ 
+
+.copyright {
+    position: absolute;
+    bottom: 3%;
+    right: 5%;
+}
 
 /* Services Section */
 

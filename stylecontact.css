@@ -18,6 +18,7 @@
     background-color: white;
     border: solid 1px white;
     border-radius: 15px;
+    overflow: scroll;
 }
 .contact-descrition {
     width: 100%;
