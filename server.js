@@ -13,6 +13,28 @@ app.get("/home.html", function(req, res) {
     res.sendFile(__dirname + "/home.html");
 });
 
+app.get("/aboutme.html", function(req, res) {
+    res.sendFile(__dirname + "/aboutme.html");
+});
+
+app.get("/services.html", function(req, res) {
+    res.sendFile(__dirname + "/services.html");
+});
+
+app.get("/portfolio.html", function(req, res) {
+    res.sendFile(__dirname + "/portfolio.html");
+});
+
+app.get("/contact.html", function(req, res) {
+    res.sendFile(__dirname + "/contact.html");
+});
+
+app.get("/signup.html", function(req, res) {
+    res.sendFile(__dirname + "/signup.html");
+});
+
+
+
 app.listen(3000, function() {
     console.log("Server is running at port 3000");
 });
