@@ -33,7 +33,10 @@ app.get("/signup.html", function(req, res) {
     res.sendFile(__dirname + "/signup.html");
 });
 
+app.post("/signup.html", function(req, res) {
 
+    res.send((console.log("Form Submitted")))
+});
 
 app.listen(3000, function() {
     console.log("Server is running at port 3000");

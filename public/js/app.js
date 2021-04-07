@@ -38,8 +38,7 @@ function errorInFields() {
    })
 };
 
-function succesfullyRegistered() {
-
+ function succesfullyRegistered() {
     for(i=0; i<formElements.length; i++) {
         formElements[i].style.border = "green solid 1px";
         let textMessage = formElements[i].name + " " + "submitted succesfully";
