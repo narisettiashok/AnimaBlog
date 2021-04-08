@@ -38,7 +38,7 @@ function errorInFields() {
    })
 };
 
- function succesfullyRegistered() {
+ function succesfullyRegistered(event) {
     for(i=0; i<formElements.length; i++) {
         formElements[i].style.border = "green solid 1px";
         let textMessage = formElements[i].name + " " + "submitted succesfully";
@@ -48,6 +48,7 @@ function errorInFields() {
     formElements.forEach(function(reset) {
         reset.value = "";
     })
+    event.submit();
 };
 
 function notSuccesfullyRegistered(message) {
@@ -100,8 +101,7 @@ function checkedMobilenumber() {
     }
 }
 
-
-signupForm.onsubmit = function(event) {
+function formSubmitted(event) {
     event.preventDefault();
     signupbtn.style.outline = "none";
     if(username.value == "" || email.value == "" || password.value == "" || mobilenumber.value == "") {
@@ -109,7 +109,7 @@ signupForm.onsubmit = function(event) {
         console.log("Fill all the Fields");
     } else {
         if(checkedUsername() == true && checkedEmail() == true && checkedPassword() == true && checkedMobilenumber() == true){
-            succesfullyRegistered();
+            succesfullyRegistered(event);
             console.log("Form Submitted Succesfully");
     } else {
         let errorMessage = ['Should be alphanumeric & min 8 Char', 'Email is incorrect','1 Spel Char, 1 Num, 8-15 Char','Enter mobile number correctly' ];

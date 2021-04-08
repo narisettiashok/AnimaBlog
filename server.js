@@ -34,8 +34,7 @@ app.get("/signup.html", function(req, res) {
 });
 
 app.post("/signup.html", function(req, res) {
-
-    res.send((console.log("Form Submitted")))
+    res.send((console.log("Form Submitted")));
 });
 
 app.listen(3000, function() {
