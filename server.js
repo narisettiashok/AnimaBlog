@@ -3,6 +3,7 @@ const bodyParser = require("body-parser");
 
 const app = express();
 app.use(bodyParser.urlencoded({extended: true}));
+app.use(bodyParser.json());
 app.use(express.static("public"));
 
 app.get("/", function(req, res) {
@@ -33,11 +34,11 @@ app.get("/signup.html", function(req, res) {
     res.sendFile(__dirname + "/signup.html");
 });
 
-app.post("/signup.html", function(req, res) {
-
-    res.send((console.log("Form Submitted")))
+app.post("/signup", function(req, res) {
+    console.log("Form Submitted", req.body);
+    res.end();
 });
 
-app.listen(3000, function() {
+app.listen(3002, function() {
     console.log("Server is running at port 3000");
 });

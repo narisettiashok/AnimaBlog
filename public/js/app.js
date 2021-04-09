@@ -38,19 +38,33 @@ function errorInFields() {
    })
 };
 
- function succesfullyRegistered() {
+ function successfullyRegistered() {
     for(i=0; i<formElements.length; i++) {
         formElements[i].style.border = "green solid 1px";
-        let textMessage = formElements[i].name + " " + "submitted succesfully";
+        let textMessage = formElements[i].name + " " + "submitted successfully";
         errorMessage[i].innerText =  textMessage.slice(0,1).toUpperCase() + textMessage.slice(1,);
     }
+    let requestBody = {};
+    formElements.forEach((element) => {
+        requestBody[element.name] = element.value;
+    }); 
 
-    formElements.forEach(function(reset) {
-        reset.value = "";
-    })
+    fetch('/signup', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(
+            requestBody
+        )
+    }).then(response => {
+            formElements.forEach(function(reset) {
+            reset.value = "";
+        });
+    });
 };
 
-function notSuccesfullyRegistered(message) {
+function notSuccessfullyRegistered(message) {
     for(i=0; i<formElements.length; i++) {
         formElements[i].style.border = "red solid 1px";
         errorMessage[i].innerText = message[i];
@@ -109,11 +123,11 @@ signupForm.onsubmit = function(event) {
         console.log("Fill all the Fields");
     } else {
         if(checkedUsername() == true && checkedEmail() == true && checkedPassword() == true && checkedMobilenumber() == true){
-            succesfullyRegistered();
+            successfullyRegistered();
             console.log("Form Submitted Succesfully");
     } else {
         let errorMessage = ['Should be alphanumeric & min 8 Char', 'Email is incorrect','1 Spel Char, 1 Num, 8-15 Char','Enter mobile number correctly' ];
-        notSuccesfullyRegistered(errorMessage);
+        notSuccessfullyRegistered(errorMessage);
             console.log("Error in submission");
     }
 }
