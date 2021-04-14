@@ -13,7 +13,7 @@
         <div class="main">
             <div class="signup-page">
                 <h1 id="create">Create Account</h1>
-            <form id="signup-form" action="/signup.html" method="POST" onsubmit="formSubmitted()">
+            <form id="signup-form" onsubmit="formSubmitted(event)">
                 <img src="flaticon/user.png" alt="User" class="flaticon-img">
                 <input class="signup-input" type="text" id="signup-username" name="username" placeholder="Username"><br>
                 <p class="signup-username-alert" name="username"></p>
@@ -41,13 +41,13 @@
             </div>
             <div class="login-page">
                 <h1 id="makeit"> Make it happen </h1>
-                <form id="login-form" action="">
+                <form id="login-form" action="/login" method="POST">
                     <img src="flaticon/user.png" alt="User" class="flaticon-img">
-                    <input class="login-input" type="text" id="username" placeholder="Username"><br>
+                    <input class="login-input" type="text" id="login-username" name="username" placeholder="Username"><br>
                     <img src="flaticon/email.png" alt="Email" class="flaticon-img">
-                    <input class="login-input" type="email" id="email" placeholder="Email"><br>
+                    <input class="login-input" type="email" id="login-email" name="email" placeholder="Email"><br>
                     <img src="flaticon/password.png" alt="password" class="flaticon-img">
-                    <input class="login-input" type="password" id="password" placeholder="Password">
+                    <input class="login-input" type="password" id="login-password" name="password" placeholder="Password">
                     <p class="password-comment-error">*password is worng</p>
                     <a href="" class="forgot-password">Forgot Password?</a><br>
                     <input class="login-checkbox" type="checkbox" id="checkbox">
@@ -63,9 +63,10 @@
                         </svg>
                         <button class="getstarted-btn">Get Started</button>
                     </div>
+                    </form>
             </div>
         </div>
         <script src="./js/app.js" type="text/javascript"></script>
-        <script src="./server.js" type="text/javascript"></script>
+        <!-- <script src="./server.js" type="text/javascript"></script> -->
     </body>
 </html>

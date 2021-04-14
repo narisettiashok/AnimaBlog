@@ -38,25 +38,40 @@ function errorInFields() {
    })
 };
 
- function succesfullyRegistered(event) {
+function sendToServer() {
+    const test = {
+        username: document.getElementById('signup-username').value,
+        email: document.getElementById('signup-email').value,
+        password: document.getElementById('signup-password').value,
+        mobileNumber: document.getElementById('signup-mobilenumber').value
+    }
+    options = {
+        method: 'POST',
+        body: JSON.stringify(test),
+        headers: {
+            'Content-Type':'application/json'
+        }
+    }
+    fetch('/signup', options);
+};
+
+ function succesfullyRegistered() {
     for(i=0; i<formElements.length; i++) {
         formElements[i].style.border = "green solid 1px";
         let textMessage = formElements[i].name + " " + "submitted succesfully";
         errorMessage[i].innerText =  textMessage.slice(0,1).toUpperCase() + textMessage.slice(1,);
     }
-
-    formElements.forEach(function(reset) {
+    sendToServer();
+     formElements.forEach(function(reset) {
         reset.value = "";
     })
-    event.submit();
 };
 
 function notSuccesfullyRegistered(message) {
     for(i=0; i<formElements.length; i++) {
         formElements[i].style.border = "red solid 1px";
         errorMessage[i].innerText = message[i];
-    }
-        
+    }   
 };
 
 function checkedUsername() {
