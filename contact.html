@@ -37,10 +37,10 @@
                 </div>
                 <div class="contact-content">
                     <h1> CONTACT US </h1>
-                    <form id="contact-form">
-                        <input class="contact-input" type="text" id="contact-user" placeholder="Name">
-                        <input class="contact-input" type="email" id="contact-email" placeholder="Email ID">
-                        <input class="contact-input" type="tel" id="contact-mobile" placeholder="Mobile Number">
+                    <form id="contact-form" action="/contact" method="POST">
+                        <input class="contact-input" type="text" id="contact-user" placeholder="Name" name="name">
+                        <input class="contact-input" type="email" id="contact-email" placeholder="Email ID" name="email">
+                        <input class="contact-input" type="tel" id="contact-mobile" placeholder="Mobile Number" name="mobileNumber">
                         <select class="contact-selection" name="Services" id="contact-dropdown">
                             <option value="gif">GIF</option>
                             <option value="animation">ANIMATION</option>
@@ -51,7 +51,7 @@
                             <option value="background">BACKGROUND</option>
                             <option value="album">ALBUM</option>
                         </select>
-                        <textarea class="contact-textarea" name="" id="contact-information" cols="30" rows="10">Description of Service to be provided</textarea>
+                        <textarea class="contact-textarea" name="" id="contact-information" cols="30" rows="10" name="description">Description of Service to be provided</textarea>
                         <button class="contact-btn" type="submit"> Post to me </button>
                     </form>
                 </div>

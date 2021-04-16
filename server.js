@@ -17,7 +17,16 @@ const userSchema = {
     mobileNumber: String
 };
 
+const contactSchema = {
+    name: String,
+    email: String,
+    mobileNumber: Number,
+    service: String,
+    description: String
+}
+
 const User = new mongoose.model("User", userSchema);
+const Contact = new mongoose.model("Contact", contactSchema);
 
 app.get("/", function(req, res) {
     res.sendFile(__dirname + "/index.html");
@@ -42,6 +51,16 @@ app.get("/portfolio.html", function(req, res) {
 app.get("/contact.html", function(req, res) {
     res.sendFile(__dirname + "/contact.html");
 });
+
+app.post("/contact", function(req, res) {
+    const name = req.body.name;
+    const email = req.body.email;
+    const mobileNumber = req.body.mobileNumber;
+    const service = req.body.Services;
+    const description = req.body.description;
+
+    console.log(name + email + mobileNumber + service + description);
+})
 
 app.get("/signup.html", function(req, res) {
     res.sendFile(__dirname + "/signup.html");
