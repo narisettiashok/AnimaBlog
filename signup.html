@@ -41,13 +41,13 @@
             </div>
             <div class="login-page">
                 <h1 id="makeit"> Make it happen </h1>
-                <form id="login-form" action="">
+                <form id="login-form" action="/login" method="POST">
                     <img src="flaticon/user.png" alt="User" class="flaticon-img">
-                    <input class="login-input" type="text" id="username" placeholder="Username"><br>
+                    <input class="login-input" type="text" id="username" placeholder="Username" name="username"><br>
                     <img src="flaticon/email.png" alt="Email" class="flaticon-img">
-                    <input class="login-input" type="email" id="email" placeholder="Email"><br>
+                    <input class="login-input" type="email" id="email" placeholder="Email" name="email"><br>
                     <img src="flaticon/password.png" alt="password" class="flaticon-img">
-                    <input class="login-input" type="password" id="password" placeholder="Password">
+                    <input class="login-input" type="password" id="password" placeholder="Password" name="password">
                     <p class="password-comment-error">*password is worng</p>
                     <a href="" class="forgot-password">Forgot Password?</a><br>
                     <input class="login-checkbox" type="checkbox" id="checkbox">
