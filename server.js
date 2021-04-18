@@ -72,7 +72,7 @@ app.post("/signup", function(req, res) {
     const password = req.body.password;
     const mobileNumber = req.body.mobilenumber;
 
-    User.register({username: username}, password, function(err, user) {
+    User.register({username: username, email: email, mobileNumber: mobileNumber}, password, function(err, user) {
         console.log(user);
         if(err) {
             console.log(err);
