@@ -23,6 +23,7 @@ app.use(passport.initialize());
 app.use(passport.session()); 
  
 mongoose.connect('mongodb://localhost:27017/userDB', {useNewUrlParser: true, useUnifiedTopology:true});
+
 mongoose.set('useCreateIndex', true);
 
 const userSchema = new mongoose.Schema({
@@ -32,13 +33,23 @@ const userSchema = new mongoose.Schema({
     mobileNumber: Number
 });
 
+const contactSchema = new mongoose.Schema({
+    name: String,
+    email: String,
+    mobileNumber: Number,
+    service: String,
+    description: String
+});
+
+
 userSchema.plugin(passportLocalMongoose);
 
 const User = new mongoose.model("User", userSchema);
+const Contact = new mongoose.model("Contact", contactSchema);
+
 passport.use(User.createStrategy());
 passport.serializeUser(User.serializeUser());
 passport.deserializeUser(User.deserializeUser());
-
 
 
 app.get("/", function(req, res) {
@@ -71,9 +82,24 @@ app.post("/contact", function(req, res) {
     const mobileNumber = req.body.mobileNumber;
     const service = req.body.Services;
     const description = req.body.description;
+    
+    const newContact = new Contact({
+        name: name,
+        email: email,
+        mobileNumber: mobileNumber,
+        service: service,
+        description: description
+    });
 
-    console.log(name + email + mobileNumber + service + description);
-})
+    newContact.save(function(err) {
+        if(err) {
+            console.log(err);
+        } else {
+            console.log("contact submitted succesfully")
+        }
+    });
+    res.sendFile(__dirname + "/contact.html");
+});
 
 app.get("/signup.html", function(req, res) {
     res.sendFile(__dirname + "/signup.html");
@@ -96,8 +122,6 @@ app.post("/signup", function(req, res) {
             })
         }
     });
-
-
 
 // const newUser = new User({
 //     username: username,
