@@ -38,39 +38,12 @@ function errorInFields() {
    })
 };
 
-<<<<<<< HEAD
-function sendToServer() {
-    const test = {
-        username: document.getElementById('signup-username').value,
-        email: document.getElementById('signup-email').value,
-        password: document.getElementById('signup-password').value,
-        mobileNumber: document.getElementById('signup-mobilenumber').value
-    }
-    options = {
-        method: 'POST',
-        body: JSON.stringify(test),
-        headers: {
-            'Content-Type':'application/json'
-        }
-    }
-    fetch('/signup', options);
-};
-
- function succesfullyRegistered() {
-=======
  function successfullyRegistered() {
->>>>>>> 1a502a76be7b2e7e267b0cee5df1a8dc46c20c18
     for(i=0; i<formElements.length; i++) {
         formElements[i].style.border = "green solid 1px";
         let textMessage = formElements[i].name + " " + "submitted successfully";
         errorMessage[i].innerText =  textMessage.slice(0,1).toUpperCase() + textMessage.slice(1,);
     }
-<<<<<<< HEAD
-    sendToServer();
-     formElements.forEach(function(reset) {
-        reset.value = "";
-    })
-=======
     let requestBody = {};
     formElements.forEach((element) => {
         requestBody[element.name] = element.value;
@@ -89,7 +62,6 @@ function sendToServer() {
             reset.value = "";
         });
     });
->>>>>>> 1a502a76be7b2e7e267b0cee5df1a8dc46c20c18
 };
 
 function notSuccessfullyRegistered(message) {
@@ -149,11 +121,7 @@ function formSubmitted(event) {
         console.log("Fill all the Fields");
     } else {
         if(checkedUsername() == true && checkedEmail() == true && checkedPassword() == true && checkedMobilenumber() == true){
-<<<<<<< HEAD
-            succesfullyRegistered(event);
-=======
             successfullyRegistered();
->>>>>>> 1a502a76be7b2e7e267b0cee5df1a8dc46c20c18
             console.log("Form Submitted Succesfully");
     } else {
         let errorMessage = ['Should be alphanumeric & min 8 Char', 'Email is incorrect','1 Spel Char, 1 Num, 8-15 Char','Enter mobile number correctly' ];
